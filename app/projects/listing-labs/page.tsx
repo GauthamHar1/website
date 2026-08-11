@@ -1,0 +1,34 @@
+import Image from "next/image";
+import { Note } from "../Figure";
+
+export const metadata = { title: "Listing Labs" };
+
+export default function ListingLabs() {
+  return (
+    <>
+      <h1>Listing Labs</h1>
+      <p>
+        Voice AI simulator for real estate agent training. Next.js, Hume EVI,
+        GPT-4o-mini, Convex, Clerk.
+      </p>
+
+      <h2>Why I started it</h2>
+      <p>{`The journey of this app started shortly after GoFish didn't go as I planned. Go Fish solved a specific problem that I had, but not enough other people had that problem and were willing to pay for it. I saw how quickly AI was moving in to the hands of everyone and I realized that domain experience will become a more real differentiator. My idea was to pick an area that still hadn't fully adopted AI, and learn the business.`}</p>
+      <p>{`I stumbled upon real estate, I was old enough to get my license and I enjoy working with people. In May 2025 I got my license and over the next 6 months I learned the business, and was able to handle 2 transactions.`}</p>
+      <p>{`When I first joined Keller Williams, the top producing agents all advised that I roleplay listing presentations with my family members. I immediately thought of using chatgpt instead and that worked great. It provided a good breadth of scenarios and objections that my dad couldn't think of and I was gaining confidence.`}</p>
+      <p>{`I then decided to test out my skills with an actual professional at my brokerage and they taught me the importance of my tonality, and how different clients need to be approached differently. This gave me the idea for listing labs, I used hume EVI to attach an emotion to each thing that you say, so you can get feedback on how you handled their obections, and your overall delivery. It was after practicing with this tool that I was able to complete my two transactions, towards the end of those 6 months.`}</p>
+      <Image
+        src="/images/real-estate.jpg"
+        alt="Real estate"
+        width={250}
+        height={250}
+      />
+
+      <h2>Then what?</h2>
+      <p>{`I spent some time demoing this to agents and many were impressed, however it was when I started approaching brokerages that I gained real insight. I decided to walk into every brokerage in my town demoing my product to those interested.`}</p>
+      <p>{`It was through this that I met the managing broker at Sotheby's Bethesda. She invited me to their sales meeting, and during our 1 on 1 meeting she brought up the valid point that there was no backing to the feedback I was giving to agents. She was right, it was just some system prompt I put into GPT to grade the the script based on the content, scenario, and emotions attached to each phrase.`}</p>
+      <p>{`She then gave me a book called the Full Fee Agent, and explained to me how she has all her agents read this book to prep for talking to clients. She knew the author, Steve Shull, and was willing to make an introduction if I could read the book and tailor my products feedback to the concepts in it. This shifted my focus to coaching programs rather than individual agents. They already have some framework, scriptbook, method, etc. and all I have to do is take that and tailor the feedback of my product to it.`}</p>
+
+    </>
+  );
+}
