@@ -7,12 +7,7 @@ import Link from "next/link";
 // slug  = folder name under app/projects/, gives you the writeup page
 //         set it to null and the "read more" link disappears
 
-const links = [
-  { label: "GitHub", href: "#" },
-  { label: "LinkedIn", href: "#" },
-  { label: "Email", href: "mailto:gauthamhari18@gmail.com" },
-  { label: "Resume", href: "#" },
-];
+
 
 const projects = [
   {
@@ -34,12 +29,29 @@ const projects = [
     stack: "Next.js · Hume EVI · GPT-4o-mini · Convex · Clerk · Vercel",
   },
   {
+    name: "Drone attack risk classification platform",
+    role: "personal project",
+    slug: null,
+    href: "https://www.youtube.com/watch?v=UCky_4lS718",
+    blurb:
+      "Scored 214,000 global energy facilities on how likely a drone attack is to succeed and how bad it would be if it did, fusing six public incident, infrastructure, and population datasets into a weighted two-part risk model. Shipped an interactive map and a natural-language chatbot for querying site-specific risk.",
+    stack: "Palantir Foundry · Python · Spark",
+  },
+  {
     name: "AegisGrid",
   role: "co-founder, COO",    
     slug: null,
     href: "https://aegisgrid.net",
     blurb:
     "Drone defense for critical infrastructure (Oil refineries, Data centers, Power plants, etc.), built around a metal mesh net system. For more info contact gautham.hari@aegisgrid.net",
+  },
+   {
+    name: "Dancify",
+    slug: "dancify",
+    href: null,
+    blurb:
+      "A dance learning app that uses pose estimation to compare your movement against a reference clip and tell you where you're off. Won $3,000 at Pitch Dingman.",
+    stack: "Swift · VNHumanPoseDetect",
   },
   {
     name: "Continual learning for robotics",
@@ -68,15 +80,7 @@ const projects = [
       "A Unix shell with piping and job control, plus a malloc implementation. Also an x86-64 battery meter simulator that reads memory-mapped device ports and unpacks bit fields by hand.",
     stack: "C · x86-64 assembly · mmap · pthreads",
   },
-  {
-    name: "Dancify",
-    role: "team project",
-    slug: "dancify",
-    href: null,
-    blurb:
-      "A dance learning app that uses pose estimation to compare your movement against a reference clip and tell you where you're off. Won $3,000 at Pitch Dingman.",
-    stack: "Swift · VNHuman ",
-  },
+ 
 ];
 
 const experience = [
@@ -113,13 +117,7 @@ export default function Home() {
 
       </p>
 
-      <div className="links">
-        {links.map((l) => (
-          <a key={l.label} href={l.href}>
-            {l.label}
-          </a>
-        ))}
-      </div>
+      
 
       <section className="section">
         <h2>Projects</h2>
