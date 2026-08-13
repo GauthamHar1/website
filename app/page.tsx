@@ -56,7 +56,7 @@ const projects = [
   {
     name: "Continual learning for robotics",
     role: "research project",
-    slug: "continual-learning",
+    slug: null,
     href: null,
     blurb:
       "An orchestrator watches model uncertainty, notices when a task looks like a new domain, and spins up a specialist from a meta-learned prior. Old specialists get frozen so they don't get overwritten, and inputs route by cosine similarity. Currently testing the idea on Split-CIFAR-100 before it goes near a robot.",
@@ -110,7 +110,7 @@ export default function Home() {
     <main>
       <h1>Gautham</h1>
       <p className="subtitle">
-        CS @ University of Maryland. Graduating May 2028.
+        CS and Philosophy @ University of Maryland 3.9 GPA. Graduating May 2028.
       </p>
 
       <p className="lede">
