@@ -131,6 +131,24 @@ p {
   color: var(--muted);
 }
 
+.dates {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 12.5px;
+  margin-left: auto;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 18px;
+  color: #303236;
+  font-size: 15px;
+}
+
+.bullets li {
+  margin-bottom: 5px;
+}
+
 .skills-grid {
   display: grid;
   grid-template-columns: 120px 1fr;

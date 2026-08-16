@@ -17,7 +17,7 @@ export default function Dancify() {
       <p>Senior year of high school I was on the men's cheer team and before each practice I would receive a video of a dance that I'd have to learn. I would prop my phone up, and start trying to copy the dance, but found myself spending more time going to my phone and rewinding the video when I mess up a pose, than actually dancing. So I started building dancify to automatically rewind the video a couple seconds once it detected a mistake in my dancing in realtime. I added two modes practice and real, inspired by the mobile game geometry dash. When you mess up in practice mode it goes back a few seconds to your last checkpoint, whereas in real mode, the whole video is restarted. I then later added a "Just Dance" mode inspired by one of my favorite childhood games, which turns any video of a dance into a Just Dance level that you can play from your phone.  
       <Image
                 src="/images/fomz.png"
-                alt="Outside of the dining hall giving out donut holes"
+                alt="me in highschool"
                 width={250}
                 height={250}
       />
@@ -31,10 +31,7 @@ export default function Dancify() {
       </p>
 
       {/* Example of the side-by-side layout. Delete if unused. */}
-      <FigureRow>
-        <Figure src="/images/dancify-ref.png" alt="Reference clip skeleton" />
-        <Figure src="/images/dancify-user.png" alt="User clip skeleton" />
-      </FigureRow>
+    
     </>
   );
 }

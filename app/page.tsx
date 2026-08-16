@@ -10,15 +10,7 @@ import Link from "next/link";
 
 
 const projects = [
-  {
-    name: "Go Fish",
-    role: "founder",
-    slug: "go-fish",
-    href: "https://www.youtube.com/watch?v=UfrSzwjrSCg",
-    blurb:
-      "Peer-to-peer fishing gear rental app",
-    stack: "Next.js · Hume EVI · GPT-4o-mini · Convex · Clerk · Vercel",
-  },
+
   {
     name: "Listing Labs",
     role: "founder",
@@ -36,6 +28,15 @@ const projects = [
     blurb:
       "Scored 214,000 global energy facilities on how likely a drone attack is to succeed and how bad it would be if it did, fusing six public incident, infrastructure, and population datasets into a weighted two-part risk model. Shipped an interactive map and a natural-language chatbot for querying site-specific risk.",
     stack: "Palantir Foundry · Python · Spark",
+  },
+    {
+    name: "Go Fish",
+    role: "founder",
+    slug: "go-fish",
+    href: "https://www.youtube.com/watch?v=UfrSzwjrSCg",
+    blurb:
+      "Peer-to-peer fishing gear rental app",
+    stack: "Next.js · Hume EVI · GPT-4o-mini · Convex · Clerk · Vercel",
   },
   {
     name: "AegisGrid",
@@ -83,7 +84,30 @@ const projects = [
  
 ];
 
-const experience = [
+// dates and bullets are optional — older entries just have a blurb
+type Experience = {
+  name: string;
+  role: string;
+  blurb: string;
+  dates?: string;
+  bullets?: string[];
+};
+
+const experience: Experience[] = [
+  // {
+  //   name: "Cyber9",
+  //   role: "security compliance engineer",
+  //   dates: "June 2026 — present",
+  //   blurb:
+  //     "Cyber9 helps DoD supply chain manufacturers get to CMMC Level 2. I'm the sole technical owner of the security tooling stack.",
+  //   bullets: [
+  //     "Own the stack end to end: Huntress MDR/SIEM, SentinelOne EDR, Tenable Nessus, Microsoft Entra ID and Intune.",
+  //     "Map deployed controls to NIST SP 800-171 requirements and maintain the evidence and status tracking used in client assessments.",
+  //     "Own vendor evaluation and the written justification for why each product was chosen over its alternatives.",
+  //     "Deploy and configure Tenable scanning agents through Intune, including scan scheduling and recurring client reporting.",
+  //     "Built an internal portal that automates onboarding for new GCC High customers.",
+  //   ],
+  // },
   {
     name: "Montana Technological University",
     role: "computer vision research",
@@ -110,8 +134,18 @@ export default function Home() {
     <main>
       <h1>Gautham</h1>
       <p className="subtitle">
-        CS and Philosophy @ University of Maryland 3.9 GPA. Graduating May 2028.
+        CS @ University of Maryland 3.9 GPA. Graduating May 2028.
       </p>
+      <ul>
+        <li>
+            <a href="/files/transcript_july26.pdf" target="_blank" rel="noopener noreferrer">View or Download Transcript (PDF)</a>
+        </li>
+        <li>
+            <a href="/files/res_general.pdf" target="_blank" rel="noopener noreferrer">View or Download Resume (PDF)</a>
+        </li>
+      </ul>
+  
+
 
       <p className="lede">
 
@@ -153,8 +187,16 @@ export default function Home() {
             <div className="item-head">
               <h3>{e.name}</h3>
               <span className="role">{e.role}</span>
+              {e.dates && <span className="dates">{e.dates}</span>}
             </div>
             <p>{e.blurb}</p>
+            {e.bullets && (
+              <ul className="bullets">
+                {e.bullets.map((b) => (
+                  <li key={b}>{b}</li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </section>
